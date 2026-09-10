@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Roshni Foundation — Stories, Reports &amp; Ways to Help</title>
+<meta name="description" content="Read our field reports, support our work, and stay in touch." />
+
+<!-- ===================================================================
+     CUSTOMISE ME: change the <title> above, the description, and
+     favicon below to match your organisation's name.
+=================================================================== -->
+<link rel="icon" href="data:,">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===================== MASTHEAD / NAV ===================== -->
+<header class="masthead">
+  <div class="wrap masthead-row">
+    <a href="#home" class="org-name">Roshni Foundation</a>
+    <nav class="main-nav" id="mainNav">
+      <a href="#articles">Articles</a>
+      <a href="#about">About</a>
+      <a href="#donate">Donate</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu">☰</button>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section id="home" class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <p class="kicker">Field notes from the ground</p>
+      <h1>We write what we see.<br>You decide what to do with it.</h1>
+      <p class="hero-sub">
+        Roshni Foundation runs education and nutrition programmes in
+        under-served districts. Every rupee, every dollar, and every
+        USDT we receive is logged in the reports below.
+      </p>
+      <div class="hero-actions">
+        <a href="#donate" class="btn btn-primary">Support the work</a>
+        <a href="#articles" class="btn btn-ghost">Read the reports</a>
+      </div>
+    </div>
+    <div class="hero-figure" aria-hidden="true">
+      <div class="figure-card">
+        <span class="figure-num" id="statPeople">—</span>
+        <span class="figure-label">people reached this year</span>
+      </div>
+      <div class="figure-card figure-card-alt">
+        <span class="figure-num" id="statArticles">—</span>
+        <span class="figure-label">reports published</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ARTICLES ===================== -->
+<section id="articles" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Articles &amp; reports</h2>
+      <p>Filter by category, or just scroll.</p>
+    </div>
+
+    <div class="category-bar" id="categoryBar">
+      <!-- filled by script.js -->
+    </div>
+
+    <div class="article-grid" id="articleGrid">
+      <!-- filled by script.js -->
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section id="about" class="section section-alt">
+  <div class="wrap about-grid">
+    <div>
+      <h2>Why this site exists</h2>
+      <p>
+        Roshni Foundation is a small, independent nonprofit. We don't have
+        a comms team — the person running the programmes is the same
+        person writing these articles and replying to your Telegram
+        messages. That's the trade we're offering: less polish,
+        more direct line to where the money goes.
+      </p>
+      <p>
+        <!-- CUSTOMISE ME: replace with your organisation's real
+             registration details if you have them (trust number,
+             80G/12A status, EIN, charity number, etc.) -->
+        Registered nonprofit · Reg. No. XXXXXXX · Founded 2021
+      </p>
+    </div>
+    <div class="about-stats">
+      <div class="stat-row"><span>Programmes running</span><strong>4</strong></div>
+      <div class="stat-row"><span>Districts covered</span><strong>7</strong></div>
+      <div class="stat-row"><span>Full-time staff</span><strong>3</strong></div>
+      <div class="stat-row"><span>Admin overhead</span><strong>&lt; 8%</strong></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== DONATE ===================== -->
+<section id="donate" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Donate</h2>
+      <p>Pick whichever rail is easiest for you. Every method reaches the same account.</p>
+    </div>
+
+    <div class="donate-tabs" role="tablist">
+      <button class="donate-tab active" data-target="india" role="tab" aria-selected="true">In India (UPI)</button>
+      <button class="donate-tab" data-target="global" role="tab" aria-selected="false">International</button>
+      <button class="donate-tab" data-target="crypto" role="tab" aria-selected="false">Crypto</button>
+    </div>
+
+    <!-- INDIA / UPI -->
+    <div class="donate-panel active" id="panel-india">
+      <div class="donate-card">
+        <div class="qr-box">
+          <img id="qrUPI" alt="UPI QR code" width="220" height="220">
+        </div>
+        <div class="donate-details">
+          <p class="donate-label">Scan with any UPI app</p>
+          <p class="donate-value" id="upiIdText">yourname@upi</p>
+          <button class="copy-btn" data-copy="#upiIdText">Copy UPI ID</button>
+          <p class="donate-note">
+            GPay, PhonePe, Paytm, BHIM — any of them will read this code
+            directly. No fees, money lands the same day.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- GLOBAL -->
+    <div class="donate-panel" id="panel-global">
+      <div class="donate-card">
+        <div class="donate-details full">
+          <p class="donate-label">PayPal</p>
+          <a class="btn btn-primary" href="https://paypal.me/yourorg" target="_blank" rel="noopener">Donate via PayPal</a>
+
+          <p class="donate-label" style="margin-top:1.5rem">Card / bank (Stripe)</p>
+          <a class="btn btn-ghost" href="https://donate.stripe.com/your-link" target="_blank" rel="noopener">Donate via card</a>
+          <p class="donate-note">
+            <!-- CUSTOMISE ME: replace both links above. PayPal.me
+                 links are free to create. Stripe needs a Stripe
+                 account with a Payment Link set up. -->
+            Both options accept most major currencies.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CRYPTO -->
+    <div class="donate-panel" id="panel-crypto">
+      <div class="crypto-grid">
+
+        <div class="donate-card">
+          <div class="qr-box"><img id="qrUSDT" alt="USDT TRC20 QR code" width="180" height="180"></div>
+          <div class="donate-details">
+            <p class="donate-label">USDT (TRC20) — Binance</p>
+            <p class="donate-value small" id="usdtAddrText">TXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+            <button class="copy-btn" data-copy="#usdtAddrText">Copy address</button>
+          </div>
+        </div>
+
+        <div class="donate-card">
+          <div class="qr-box"><img id="qrBTC" alt="Bitcoin QR code" width="180" height="180"></div>
+          <div class="donate-details">
+            <p class="donate-label">Bitcoin (BTC)</p>
+            <p class="donate-value small" id="btcAddrText">bc1qxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+            <button class="copy-btn" data-copy="#btcAddrText">Copy address</button>
+          </div>
+        </div>
+
+        <div class="donate-card">
+          <div class="qr-box"><img id="qrETH" alt="Ethereum QR code" width="180" height="180"></div>
+          <div class="donate-details">
+            <p class="donate-label">Ethereum (ETH / ERC20)</p>
+            <p class="donate-value small" id="ethAddrText">0xXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</p>
+            <button class="copy-btn" data-copy="#ethAddrText">Copy address</button>
+          </div>
+        </div>
+
+        <div class="donate-card">
+          <div class="donate-details full">
+            <p class="donate-label">Binance Pay ID</p>
+            <p class="donate-value" id="binancePayText">123456789</p>
+            <button class="copy-btn" data-copy="#binancePayText">Copy Pay ID</button>
+            <p class="donate-note">
+              <!-- CUSTOMISE ME: Binance Pay's own QR is generated
+                   inside the Binance app (Wallet → Pay → Receive) and
+                   isn't a plain URL, so it can't be auto-drawn here.
+                   Screenshot that QR from your app and swap it in as
+                   an image if you want a scannable Binance Pay code. -->
+              Open Binance → Pay → Send → enter this Pay ID.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <p class="donate-footnote">
+      Every donation is logged in our <a href="#" id="ledgerLink">public ledger</a> (link this to a simple
+      spreadsheet, Notion page, or Google Sheet if you want to show donors where funds went).
+    </p>
+  </div>
+</section>
+
+<!-- ===================== SUBSCRIBE ===================== -->
+<section class="section section-alt subscribe">
+  <div class="wrap subscribe-inner">
+    <div>
+      <h2>Get new reports by email</h2>
+      <p>One email per article. No spam, unsubscribe anytime.</p>
+    </div>
+    <!--
+      CUSTOMISE ME: this form posts to Formspree. Steps:
+      1. Go to formspree.io, sign up free, create a form.
+      2. Replace YOUR_FORM_ID below with the ID they give you.
+      Alternative: swap the action for a Mailchimp / Buttondown /
+      ConvertKit signup-form URL — they all accept a plain <form>.
+    -->
+    <form class="subscribe-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <input type="email" name="email" placeholder="you@example.com" required>
+      <button type="submit" class="btn btn-primary">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section id="contact" class="section contact">
+  <div class="wrap contact-grid">
+    <div>
+      <h2>Talk to us directly</h2>
+      <p>
+        No ticketing system, no auto-reply bot. Message us on Telegram
+        and a real person from the team replies.
+      </p>
+      <!-- CUSTOMISE ME: replace YOUR_TELEGRAM_USERNAME -->
+      <a href="https://t.me/YOUR_TELEGRAM_USERNAME" target="_blank" rel="noopener" class="btn btn-telegram">
+        Message us on Telegram
+      </a>
+    </div>
+    <div class="contact-secondary">
+      <p><strong>Email</strong><br><a href="mailto:hello@yourorg.org">hello@yourorg.org</a></p>
+      <p><strong>GitHub</strong><br><a href="https://github.com/yourorg" target="_blank" rel="noopener">github.com/yourorg</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- Floating Telegram button, always visible -->
+<a href="https://t.me/YOUR_TELEGRAM_USERNAME" target="_blank" rel="noopener" class="float-telegram" aria-label="Message us on Telegram">
+  ✈
+</a>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>&copy; <span id="year"></span> Roshni Foundation. Built and run by the people doing the work.</p>
+  </div>
+</footer>
+
+<!-- ===================== ARTICLE MODAL ===================== -->
+<div class="modal-overlay" id="articleModal">
+  <div class="modal-box">
+    <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+    <p class="modal-category" id="modalCategory"></p>
+    <h2 id="modalTitle"></h2>
+    <p class="modal-meta" id="modalMeta"></p>
+    <div class="modal-body" id="modalBody"></div>
+
+    <hr class="modal-divider">
+
+    <!-- ===================================================================
+         COMMENTS via giscus (GitHub Discussions-powered comments).
+         Steps to activate:
+         1. Make your GitHub repo public.
+         2. Turn on Discussions: repo → Settings → Features → Discussions.
+         3. Go to https://giscus.app, fill in your repo name, pick a
+            Discussion category (e.g. "Comments"), and it generates a
+            script tag with YOUR real data-repo / data-repo-id /
+            data-category / data-category-id values.
+         4. Replace the whole <script class="giscus-script"> block
+            below with the one giscus.app gives you.
+    =================================================================== -->
+    <h3 class="comments-heading">Comments</h3>
+    <div id="giscusContainer">
+      <script class="giscus-script"
+        src="https://giscus.app/client.js"
+        data-repo="YOUR_GITHUB_USERNAME/YOUR_REPO"
+        data-repo-id="YOUR_REPO_ID"
+        data-category="Comments"
+        data-category-id="YOUR_CATEGORY_ID"
+        data-mapping="specific"
+        data-term=""
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+      </script>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
